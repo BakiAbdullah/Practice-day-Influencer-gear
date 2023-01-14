@@ -8,19 +8,14 @@
   --text-color-light: #787885;
   --background-color: #0a0826;
   --primary-btn-color: #e02c6d;
-  --gradient-color: linear-gradient(
-    180deg,
-    hsla(207, 48%, 72%, 0),
-    hsla(207, 65%, 65%, 1)
-  );
   /* ======== Font weight ======== */
   --font-medium: 500;
   --font-semi-bold: 600;
   --font-bold: 700;
   /* ======== Font and typography ====== */
   --body-font: "Poppins", sans-serif;
-  --h1-font-size: 1.5rem;
-  --h2-font-size: 1.25rem;
+  --h1-font-size: 3.25rem;
+  --h2-font-size: 2rem;
   --h3-font-size: 1rem;
   --biggest-font-size: 1.5rem;
   --normal-font-size: 0.938rem;
@@ -40,18 +35,14 @@ html {
 
 body {
   font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  background-color: var(--body-color);
-  color: var(--text-color);
-  transition: background 0.4s;
 }
 
 h1,
 h2,
 h3 {
   color: var(--title-color);
-  font-family: var(--title-font);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-bold);
+  margin-bottom: 20px;
 }
 
 ul {
@@ -60,36 +51,156 @@ ul {
 
 a {
   text-decoration: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
+  font-size: var(--h3-font-size);
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
 }
 
 /* =============== REUSABLE CSS CLASSES ===============*/
 
 .container {
-  max-width: 1024px;
-  margin-inline: 1.5rem;
+  max-width: 1250px;
+  margin: 0 auto;
+  /* margin-inline: 1.5rem; */
 }
-.grid {
-  display: grid;
-  gap: 1.5rem;
+.flex {
+  display: flex;
+  align-items: center;
 }
-.section__title,
+/* .section__title,
 .section__subtitle {
+  text-align: center;
+} */
+
+.section__title {
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-medium);
+  margin-bottom: 0.25rem;
+  color: #18191F;
+}
+.section__subtitle {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-bold);
+  color: var(--text-color-light);
+}
+
+/* ============== Nav Styles Starts =============== */
+nav {
+  padding: 50px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_items {
+  gap: 25px;
+}
+.nav_items > a {
+  transition: hover ease-in 0.2s;
+}
+.nav_items > a:hover {
+  cursor: pointer;
+  color: var(--primary-btn-color);
+}
+
+.logo h3 {
+  font-size: var(--biggest-font-size);
+  font-weight: var(--font-bold);
+}
+/* ============== Nav Styles Ends =============== */
+
+/* =============== Banner Styles ================== */
+
+.cam_bg {
+  position: absolute;
+  z-index: -1;
+  max-width: 475px;
+  height: auto;
+  right: 225px;
+}
+.banner_description {
+  padding: 80px 180px 0 50px;
+}
+.banner_description h1 {
+  font-size: var(--h1-font-size);
+}
+
+.btn-primary {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-semi-bold);
+  color: #fff;
+  background-color: var(--primary-btn-color);
+  border-radius: 41px;
+  border: none;
+  padding: 12px 25px;
+  margin-top: 30px;
+  transition: transform ease-in 0.1s;
+}
+
+.btn-primary:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+
+.btn-primary .fa-arrow-right-long {
+  margin-left: 5px;
+}
+/* =============== Banner Styles Ends ================== */
+
+/* =============== Ecommerce Styles ================== */
+
+.ecom_img_container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 90px;
+}
+
+hr {
+  width: 970px;
+  margin: 20px auto;
+
+}
+/* =============== Ecommerce Styles Ends ================== */ 
+
+
+/* =============== Popular Collection Styles ================== */
+.popular_collection h2{
   text-align: center;
 }
 
-.section__title {
-  font-size: var(--h1-font-size);
-  font-weight: var(--font-semi-bold);
-  margin-bottom: 0.25rem;
+.collection_gallery {
+  max-width: 1178px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
-.section__subtitle {
-  display: block;
-  font-size: var(--small-font-size);
+
+.gallery_img{
+  width: 375px;
+  height: 520px;
+  box-shadow: -4px 10px 16px 3px rgba(0,0,0,0.19);
+  /* text-align: center; */
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.gallery_img img {
+  width: 100%;
+}
+.gallery{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+}
+.filled {
+  color: #FB8200;
+}
+.rating{
   color: var(--text-color-light);
-  margin-bottom: 3rem;
+  font-weight: var(--font-semi-bold);
 }
+.price {
+  font-size: var(--biggest-font-size);
+  font-weight: normal;
+}
+/* =============== Popular Collection  Ends ================== */
