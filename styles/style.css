@@ -15,9 +15,9 @@
   /* ======== Font and typography ====== */
   --body-font: "Poppins", sans-serif;
   --h1-font-size: 3.25rem;
-  --h2-font-size: 2rem;
+  --h2-font-size: 2.15rem;
   --h3-font-size: 1rem;
-  --biggest-font-size: 1.5rem;
+  --biggest-font-size: 1.7rem;
   --normal-font-size: 0.938rem;
   --small-font-size: 0.813rem;
 }
@@ -76,6 +76,7 @@ a {
   font-size: var(--h2-font-size);
   font-weight: var(--font-medium);
   margin-bottom: 0.25rem;
+  margin-top: 1rem;
   color: #18191F;
 }
 .section__subtitle {
@@ -110,12 +111,10 @@ nav {
 
 /* =============== Banner Styles ================== */
 
-.cam_bg {
-  position: absolute;
-  z-index: -1;
-  max-width: 475px;
-  height: auto;
-  right: 225px;
+.banner_img {
+  background-image: url(../images/camera-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .banner_description {
   padding: 80px 180px 0 50px;
@@ -166,6 +165,8 @@ hr {
 /* =============== Popular Collection Styles ================== */
 .popular_collection h2{
   text-align: center;
+  font-size: var(--h2-font-size);
+  margin: 95px 0 50px 0;
 }
 
 .collection_gallery {
@@ -177,11 +178,11 @@ hr {
 
 .gallery_img{
   width: 375px;
-  height: 520px;
+  height: auto;
   box-shadow: -4px 10px 16px 3px rgba(0,0,0,0.19);
-  /* text-align: center; */
   padding: 20px;
   margin-bottom: 20px;
+  border-radius: 8px;
 }
 .gallery_img img {
   width: 100%;
@@ -203,4 +204,24 @@ hr {
   font-size: var(--biggest-font-size);
   font-weight: normal;
 }
+.see_more  {
+  display: flex;
+  justify-content: center;
+}
+.see_more a {
+  color: var(--primary-btn-color);
+  font-size: var(--h3-font-size);
+}
 /* =============== Popular Collection  Ends ================== */
+
+/* =============== Featured Product Section ================== */
+.featured_product{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+
+/* =============== Featured Product Section Ends ================== */
